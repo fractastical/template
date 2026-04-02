@@ -209,13 +209,15 @@ def run_render_pipeline(project_name: str = "project") -> int:
             progress.complete_substage()
     
     # Generate combined PDF from all markdown files
+    combined_pdf_ok = False
     if md_files:
         try:
             logger.info("\n" + "="*60)
             logger.info("Generating combined PDF manuscript...")
             combined_pdf = manager.render_combined_pdf(md_files, manuscript_dir, project_name)
             logger.info(f"✅ Generated combined PDF: {combined_pdf.name}")
-            
+            combined_pdf_ok = True
+
         except RenderingError as re:
             logger.error(f"❌ Rendering error generating combined PDF: {re.message}")
             # Always show full error message (which includes Pandoc output)
@@ -278,8 +280,7 @@ def run_render_pipeline(project_name: str = "project") -> int:
                     logger.warning(f"    • {suggestion}")
             else:
                 logger.warning("  No specific suggestions available")
-            # Don't fail the entire pipeline for combined PDF generation
-            # The error has already been logged in detail above
+            # Fail the pipeline when combined PDF is required (Stage 6 validation expects it)
             if rendered_count > 0:
                 logger.info(f"ℹ️  Note: {rendered_count} individual PDF file(s) were generated successfully despite combined PDF failure.")
         except Exception as e:
@@ -341,8 +342,11 @@ def run_render_pipeline(project_name: str = "project") -> int:
     summary = generate_rendering_summary(project_name)
     log_rendering_summary(summary)
 
-    log_success("PDF rendering pipeline completed", logger)
-    return 0
+    if combined_pdf_ok or not md_files:
+        log_success("PDF rendering pipeline completed", logger)
+        return 0
+    logger.error("PDF rendering pipeline completed but combined PDF was not created - fix LaTeX/figures and re-run Stage 5")
+    return 1
 
 
 def generate_rendering_summary(project_name: str = "project") -> dict:

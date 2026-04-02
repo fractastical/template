@@ -18,6 +18,18 @@ from infrastructure.rendering.latex_utils import compile_latex
 logger = get_logger(__name__)
 
 
+def _figures_dir_for_manuscript(manuscript_dir: Path) -> Path:
+    """Resolve figures directory from manuscript directory.
+
+    When manuscript is in output/manuscript/ (injected), figures are in output/figures/.
+    When manuscript is in project/manuscript/, figures are in project/output/figures/.
+    """
+    parent = manuscript_dir.parent
+    if parent.name == "output":
+        return parent / "figures"
+    return parent / "output" / "figures"
+
+
 def _parse_missing_package_error(log_file: Path) -> Optional[str]:
     """Parse LaTeX log for missing package errors.
 
@@ -326,7 +338,7 @@ class PDFRenderer:
         # The --natbib flag ensures that LaTeX \cite{} commands are properly formatted.
 
         # Add resource paths for figure resolution
-        figures_dir = manuscript_dir.parent / "output" / "figures"
+        figures_dir = _figures_dir_for_manuscript(manuscript_dir)
         pandoc_to_tex.extend(
             [
                 "--resource-path=" + str(manuscript_dir),
@@ -875,7 +887,7 @@ class PDFRenderer:
         combined_tex.write_text(tex_content)
 
         # Verify figure files exist before compilation
-        figures_dir = manuscript_dir.parent / "output" / "figures"
+        figures_dir = _figures_dir_for_manuscript(manuscript_dir)
         import re
 
         fig_pattern = r"\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\}"
@@ -1066,6 +1078,7 @@ class PDFRenderer:
                             logger.warning(
                                 f"⚠️  LaTeX compilation failed (run {run+1}), continuing..."
                             )
+                            missing_pkg = None  # log not available to parse
 
                             if missing_pkg:
                                 raise RenderingError(
@@ -1171,6 +1184,25 @@ class PDFRenderer:
                 # are preserved for debugging and reference purposes
                 return output_file
             else:
+                # Parse log so we can suggest missing package install when applicable
+                log_file = output_dir / "_combined_manuscript.log"
+                missing_pkg = _parse_missing_package_error(log_file) if log_file.exists() else None
+                if missing_pkg:
+                    raise RenderingError(
+                        f"Missing LaTeX package: {missing_pkg}",
+                        context={
+                            "package": missing_pkg,
+                            "source": str(combined_tex),
+                            "output": str(output_file),
+                            "log_file": str(log_file),
+                        },
+                        suggestions=[
+                            f"Install package: sudo tlmgr install {missing_pkg}",
+                            "Verify LaTeX packages: python3 -m infrastructure.rendering.latex_package_validator",
+                            "Update TeX Live: sudo tlmgr update --self",
+                            f"Check log file for details: {log_file}",
+                        ],
+                    )
                 raise RenderingError(
                     f"PDF file was not created",
                     context={"source": str(combined_tex), "output": str(output_file)},
@@ -1362,7 +1394,7 @@ class PDFRenderer:
         # We'll use a fallback string replacement after regex for any missed paths
         pandocbounded_pattern = r"](\{\.\.\/output\/figures\/[^}]+\.png\})\}"
 
-        figures_dir = manuscript_dir.parent / "output" / "figures"
+        figures_dir = _figures_dir_for_manuscript(manuscript_dir)
         fixed_count = 0
         paths_fixed = []
 

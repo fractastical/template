@@ -1,29 +1,47 @@
 {
-  "timestamp": "2026-02-20T12:28:29.098478",
-  "total_projects": 1,
+  "timestamp": "2026-03-19T23:24:28.490615",
+  "total_projects": 2,
   "successful_projects": 1,
-  "failed_projects": 0,
-  "total_duration": 137.9809808731079,
+  "failed_projects": 1,
+  "total_duration": 6122.0632429122925,
   "infra_test_duration": 0.0,
   "projects": {
     "act_inf_metaanalysis": {
+      "success": false,
+      "duration": 5667.240526199341,
+      "stages_completed": 5,
+      "errors": []
+    },
+    "act_inf_metaanalysis_mine": {
       "success": true,
-      "duration": 137.77921152114868,
+      "duration": 446.38693404197693,
       "stages_completed": 7,
       "errors": []
     }
   },
   "performance_analysis": {
     "slowest_project": "act_inf_metaanalysis",
-    "fastest_project": "act_inf_metaanalysis",
-    "average_duration": 137.77921152114868,
-    "total_pipeline_time": 137.77921152114868
+    "fastest_project": "act_inf_metaanalysis_mine",
+    "average_duration": 3056.813730120659,
+    "total_pipeline_time": 6113.627460241318
   },
   "error_aggregation": {
     "total_errors": 0,
     "errors_by_project": {
-      "act_inf_metaanalysis": 0
+      "act_inf_metaanalysis": 0,
+      "act_inf_metaanalysis_mine": 0
     }
   },
-  "recommendations": []
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Review failed projects",
+      "details": "1 project(s) failed execution"
+    },
+    {
+      "priority": "medium",
+      "action": "Consider performance optimization",
+      "details": "Average project execution time: 3056.8s"
+    }
+  ]
 }

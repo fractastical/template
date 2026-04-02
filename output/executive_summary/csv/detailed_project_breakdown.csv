@@ -1,0 +1,47 @@
+Project,Category,Metric,Value,Unit,Description,Health_Impact,Recommended_Range
+act_inf_metaanalysis,Manuscript,Total_Words,19925,words,Total words in manuscript sections,High,1000-20000 words
+act_inf_metaanalysis,Manuscript,Sections,20,count,Number of manuscript sections,Medium,3-20 sections
+act_inf_metaanalysis,Manuscript,Equations,0,count,Mathematical equations in manuscript,Low,0-50 equations
+act_inf_metaanalysis,Manuscript,Figures,0,count,Figure references in manuscript,Low,0-20 figures
+act_inf_metaanalysis,Manuscript,References,19,count,Citation references,Medium,10-200 references
+act_inf_metaanalysis,Codebase,Source_Files,30,files,Python source files,Medium,1-20 files
+act_inf_metaanalysis,Codebase,Source_Lines,4969,lines,Lines of source code,Medium,100-5000 lines
+act_inf_metaanalysis,Codebase,Methods,120,count,Function/method definitions,Medium,10-500 methods
+act_inf_metaanalysis,Codebase,Classes,9,count,Class definitions,Low,0-50 classes
+act_inf_metaanalysis,Codebase,Scripts,6,files,Analysis scripts,Low,0-10 scripts
+act_inf_metaanalysis,Testing,Test_Files,53,files,Test files discovered,High,1+ files
+act_inf_metaanalysis,Testing,Total_Tests,534,tests,Total test cases (-1 = unavailable),High,10-1000 tests
+act_inf_metaanalysis,Testing,Coverage_Percent,95.33421575115817,percent,Code coverage percentage,High,90-100%
+act_inf_metaanalysis,Testing,Execution_Time,0.0,seconds,Test execution time,Low,1-300 seconds
+act_inf_metaanalysis,Outputs,PDF_Files,0,files,Generated PDF documents,High,1+ files
+act_inf_metaanalysis,Outputs,PDF_Size_MB,0.00,MB,Total PDF file size,Low,0.1-10 MB
+act_inf_metaanalysis,Outputs,Figures,0,files,Generated figure files,Medium,0-50 figures
+act_inf_metaanalysis,Outputs,Slides,0,files,Generated slide files,Medium,0-20 slide sets
+act_inf_metaanalysis,Outputs,Web_Outputs,0,files,Generated web files,Medium,0-20 web files
+act_inf_metaanalysis,Pipeline,Total_Duration,5667.240526199341,seconds,Total pipeline execution time,Medium,60-600 seconds
+act_inf_metaanalysis,Pipeline,Stages_Passed,4,stages,Pipeline stages completed successfully,High,6 stages
+act_inf_metaanalysis,Pipeline,Bottleneck_Stage,Project Analysis,stage_name,Slowest pipeline stage,Medium,Varies by project
+act_inf_metaanalysis,Pipeline,Bottleneck_Duration,5613.113463163376,seconds,Time spent in bottleneck stage,Medium,10-300 seconds
+act_inf_metaanalysis_mine,Manuscript,Total_Words,12969,words,Total words in manuscript sections,High,1000-20000 words
+act_inf_metaanalysis_mine,Manuscript,Sections,16,count,Number of manuscript sections,Medium,3-20 sections
+act_inf_metaanalysis_mine,Manuscript,Equations,10,count,Mathematical equations in manuscript,Low,0-50 equations
+act_inf_metaanalysis_mine,Manuscript,Figures,0,count,Figure references in manuscript,Low,0-20 figures
+act_inf_metaanalysis_mine,Manuscript,References,0,count,Citation references,Medium,10-200 references
+act_inf_metaanalysis_mine,Codebase,Source_Files,30,files,Python source files,Medium,1-20 files
+act_inf_metaanalysis_mine,Codebase,Source_Lines,4736,lines,Lines of source code,Medium,100-5000 lines
+act_inf_metaanalysis_mine,Codebase,Methods,120,count,Function/method definitions,Medium,10-500 methods
+act_inf_metaanalysis_mine,Codebase,Classes,9,count,Class definitions,Low,0-50 classes
+act_inf_metaanalysis_mine,Codebase,Scripts,5,files,Analysis scripts,Low,0-10 scripts
+act_inf_metaanalysis_mine,Testing,Test_Files,49,files,Test files discovered,High,1+ files
+act_inf_metaanalysis_mine,Testing,Total_Tests,496,tests,Total test cases (-1 = unavailable),High,10-1000 tests
+act_inf_metaanalysis_mine,Testing,Coverage_Percent,94.08849557522124,percent,Code coverage percentage,High,90-100%
+act_inf_metaanalysis_mine,Testing,Execution_Time,0.0,seconds,Test execution time,Low,1-300 seconds
+act_inf_metaanalysis_mine,Outputs,PDF_Files,1,files,Generated PDF documents,High,1+ files
+act_inf_metaanalysis_mine,Outputs,PDF_Size_MB,2.84,MB,Total PDF file size,Low,0.1-10 MB
+act_inf_metaanalysis_mine,Outputs,Figures,16,files,Generated figure files,Medium,0-50 figures
+act_inf_metaanalysis_mine,Outputs,Slides,15,files,Generated slide files,Medium,0-20 slide sets
+act_inf_metaanalysis_mine,Outputs,Web_Outputs,16,files,Generated web files,Medium,0-20 web files
+act_inf_metaanalysis_mine,Pipeline,Total_Duration,446.38693404197693,seconds,Total pipeline execution time,Medium,60-600 seconds
+act_inf_metaanalysis_mine,Pipeline,Stages_Passed,7,stages,Pipeline stages completed successfully,High,6 stages
+act_inf_metaanalysis_mine,Pipeline,Bottleneck_Stage,Project Analysis,stage_name,Slowest pipeline stage,Medium,Varies by project
+act_inf_metaanalysis_mine,Pipeline,Bottleneck_Duration,386.8382239341736,seconds,Time spent in bottleneck stage,Medium,10-300 seconds

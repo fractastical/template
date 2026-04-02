@@ -1,0 +1,3 @@
+Project,Health_Score,Health_Grade,Manuscript_Words,Manuscript_Sections,Manuscript_Equations,Manuscript_Figures,Test_Total,Test_Passed,Test_Failed,Test_Coverage_Pct,Test_Execution_Time,Pipeline_Duration,Pipeline_Stages_Passed,Pipeline_Bottleneck_Stage,Pipeline_Bottleneck_Duration,Output_PDFs,Output_PDF_Size_MB,Output_Figures,Output_Slides,Output_Web,Output_Total
+act_inf_metaanalysis,90.0,A,19925,20,0,0,534,534,0,95.33421575115817,0.0,5667.240526199341,4,Project Analysis,5613.113463163376,0,0.0,0,0,0,0
+act_inf_metaanalysis_mine,100.0,A,12969,16,10,0,496,496,0,94.08849557522124,0.0,446.38693404197693,7,Project Analysis,386.8382239341736,1,2.8362607955932617,16,15,16,48

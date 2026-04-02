@@ -233,6 +233,9 @@ def validate_preamble_packages(strict: bool = False) -> ValidationReport:
         "xcolor",
         "listings",
         "lmodern",
+        "algorithm2e",
+        "ifoddpage",  # required by algorithm2e
+        "relsize",  # relative font sizing, used by some preamble/macros
     ]
 
     if strict:

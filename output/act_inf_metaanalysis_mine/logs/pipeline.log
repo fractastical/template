@@ -1,0 +1,87 @@
+[2026-03-19 23:16:53,939] [INFO] Recreated pipeline log file: /Users/jdietz/Documents/GitHub/dev/template/projects/act_inf_metaanalysis_mine/output/logs/pipeline.log
+[2026-03-19 23:16:53,939] [INFO] [infrastructure.core.pipeline] Recreated pipeline log file: /Users/jdietz/Documents/GitHub/dev/template/projects/act_inf_metaanalysis_mine/output/logs/pipeline.log
+[2026-03-19 23:16:53,939] [INFO] ✓ Stage 1 completed successfully (0.0s)
+[2026-03-19 23:16:53,939] [INFO] [infrastructure.core.pipeline] ✓ Stage 1 completed successfully (0.0s)
+[2026-03-19 23:16:53,939] [INFO] 
+[2026-03-19 23:16:53,939] [INFO] [infrastructure.core.pipeline] 
+[2026-03-19 23:16:53,940] [INFO] [2/8] Environment Setup (25% complete)
+[2026-03-19 23:16:53,940] [INFO] [infrastructure.core.pipeline] [2/8] Environment Setup (25% complete)
+[2026-03-19 23:16:53,940] [INFO]   Elapsed: 0s | ETA: 0s
+[2026-03-19 23:16:53,940] [INFO] [infrastructure.core.pipeline]   Elapsed: 0s | ETA: 0s
+[2026-03-19 23:16:53,940] [INFO] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:16:53,940] [INFO] [infrastructure.core.pipeline] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:16:53,940] [INFO] [infrastructure.core.logging_utils] Starting: Stage 2: Environment Setup
+[2026-03-19 23:16:53,940] [INFO] Running environment setup...
+[2026-03-19 23:16:53,940] [INFO] [infrastructure.core.pipeline] Running environment setup...
+[2026-03-19 23:16:54,417] [INFO] [infrastructure.core.logging_utils] Completed: Stage 2: Environment Setup (0.5s)
+[2026-03-19 23:16:54,417] [INFO] ✓ Stage 2 completed successfully (0.5s)
+[2026-03-19 23:16:54,417] [INFO] [infrastructure.core.pipeline] ✓ Stage 2 completed successfully (0.5s)
+[2026-03-19 23:16:54,417] [INFO] Skipping stage: Infrastructure Tests
+[2026-03-19 23:16:54,417] [INFO] [infrastructure.core.pipeline] Skipping stage: Infrastructure Tests
+[2026-03-19 23:16:54,417] [INFO] 
+[2026-03-19 23:16:54,417] [INFO] [infrastructure.core.pipeline] 
+[2026-03-19 23:16:54,417] [INFO] [3/8] Project Tests (37% complete)
+[2026-03-19 23:16:54,417] [INFO] [infrastructure.core.pipeline] [3/8] Project Tests (37% complete)
+[2026-03-19 23:16:54,417] [INFO]   Elapsed: 0s | ETA: 0s
+[2026-03-19 23:16:54,417] [INFO] [infrastructure.core.pipeline]   Elapsed: 0s | ETA: 0s
+[2026-03-19 23:16:54,417] [INFO] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:16:54,417] [INFO] [infrastructure.core.pipeline] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:16:54,418] [INFO] [infrastructure.core.logging_utils] Starting: Stage 3: Project Tests
+[2026-03-19 23:16:54,418] [INFO] Running project tests...
+[2026-03-19 23:16:54,418] [INFO] [infrastructure.core.pipeline] Running project tests...
+[2026-03-19 23:17:05,701] [INFO] [infrastructure.core.logging_utils] Completed: Stage 3: Project Tests (11.3s)
+[2026-03-19 23:17:05,702] [INFO] ✓ Stage 3 completed successfully (11.3s)
+[2026-03-19 23:17:05,702] [INFO] [infrastructure.core.pipeline] ✓ Stage 3 completed successfully (11.3s)
+[2026-03-19 23:17:05,702] [INFO] 
+[2026-03-19 23:17:05,702] [INFO] [infrastructure.core.pipeline] 
+[2026-03-19 23:17:05,702] [INFO] [4/8] Project Analysis (50% complete)
+[2026-03-19 23:17:05,702] [INFO] [infrastructure.core.pipeline] [4/8] Project Analysis (50% complete)
+[2026-03-19 23:17:05,702] [INFO]   Elapsed: 11s | ETA: 11s
+[2026-03-19 23:17:05,702] [INFO] [infrastructure.core.pipeline]   Elapsed: 11s | ETA: 11s
+[2026-03-19 23:17:05,702] [INFO] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:17:05,702] [INFO] [infrastructure.core.pipeline] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:17:05,703] [INFO] [infrastructure.core.logging_utils] Starting: Stage 4: Project Analysis
+[2026-03-19 23:17:05,703] [INFO] Running project analysis...
+[2026-03-19 23:17:05,703] [INFO] [infrastructure.core.pipeline] Running project analysis...
+[2026-03-19 23:23:32,539] [INFO] [infrastructure.core.logging_utils] Completed: Stage 4: Project Analysis (386.8s)
+[2026-03-19 23:23:32,540] [INFO] ✓ Stage 4 completed successfully (386.8s)
+[2026-03-19 23:23:32,540] [INFO] [infrastructure.core.pipeline] ✓ Stage 4 completed successfully (386.8s)
+[2026-03-19 23:23:32,541] [INFO] 
+[2026-03-19 23:23:32,541] [INFO] [infrastructure.core.pipeline] 
+[2026-03-19 23:23:32,541] [INFO] [5/8] PDF Rendering (62% complete)
+[2026-03-19 23:23:32,541] [INFO] [infrastructure.core.pipeline] [5/8] PDF Rendering (62% complete)
+[2026-03-19 23:23:32,541] [INFO]   Elapsed: 6m 38s | ETA: 3m 59s
+[2026-03-19 23:23:32,541] [INFO] [infrastructure.core.pipeline]   Elapsed: 6m 38s | ETA: 3m 59s
+[2026-03-19 23:23:32,541] [INFO] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:23:32,541] [INFO] [infrastructure.core.pipeline] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:23:32,542] [INFO] [infrastructure.core.logging_utils] Starting: Stage 5: PDF Rendering
+[2026-03-19 23:23:32,542] [INFO] Running PDF rendering...
+[2026-03-19 23:23:32,542] [INFO] [infrastructure.core.pipeline] Running PDF rendering...
+[2026-03-19 23:24:19,718] [INFO] [infrastructure.core.logging_utils] Completed: Stage 5: PDF Rendering (47.2s)
+[2026-03-19 23:24:19,718] [INFO] ✓ Stage 5 completed successfully (47.2s)
+[2026-03-19 23:24:19,718] [INFO] [infrastructure.core.pipeline] ✓ Stage 5 completed successfully (47.2s)
+[2026-03-19 23:24:19,718] [INFO] 
+[2026-03-19 23:24:19,718] [INFO] [infrastructure.core.pipeline] 
+[2026-03-19 23:24:19,718] [INFO] [6/8] Output Validation (75% complete)
+[2026-03-19 23:24:19,718] [INFO] [infrastructure.core.pipeline] [6/8] Output Validation (75% complete)
+[2026-03-19 23:24:19,718] [INFO]   Elapsed: 7m 25s | ETA: 2m 28s
+[2026-03-19 23:24:19,718] [INFO] [infrastructure.core.pipeline]   Elapsed: 7m 25s | ETA: 2m 28s
+[2026-03-19 23:24:19,719] [INFO] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:24:19,719] [INFO] [infrastructure.core.pipeline] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:24:19,719] [INFO] [infrastructure.core.logging_utils] Starting: Stage 6: Output Validation
+[2026-03-19 23:24:19,719] [INFO] Running output validation...
+[2026-03-19 23:24:19,719] [INFO] [infrastructure.core.pipeline] Running output validation...
+[2026-03-19 23:24:19,968] [INFO] [infrastructure.core.logging_utils] Completed: Stage 6: Output Validation (0.2s)
+[2026-03-19 23:24:19,968] [INFO] ✓ Stage 6 completed successfully (0.2s)
+[2026-03-19 23:24:19,968] [INFO] [infrastructure.core.pipeline] ✓ Stage 6 completed successfully (0.2s)
+[2026-03-19 23:24:19,968] [INFO] 
+[2026-03-19 23:24:19,968] [INFO] [infrastructure.core.pipeline] 
+[2026-03-19 23:24:19,968] [INFO] [7/8] Copy Outputs (87% complete)
+[2026-03-19 23:24:19,968] [INFO] [infrastructure.core.pipeline] [7/8] Copy Outputs (87% complete)
+[2026-03-19 23:24:19,968] [INFO]   Elapsed: 7m 26s | ETA: 1m 3s
+[2026-03-19 23:24:19,968] [INFO] [infrastructure.core.pipeline]   Elapsed: 7m 26s | ETA: 1m 3s
+[2026-03-19 23:24:19,969] [INFO] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:24:19,969] [INFO] [infrastructure.core.pipeline] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-19 23:24:19,969] [INFO] [infrastructure.core.logging_utils] Starting: Stage 7: Copy Outputs
+[2026-03-19 23:24:19,969] [INFO] Running output copying...
+[2026-03-19 23:24:19,969] [INFO] [infrastructure.core.pipeline] Running output copying...

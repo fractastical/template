@@ -164,6 +164,14 @@ def main() -> int:
         return 0
     else:
         logger.error("\n❌ Environment setup failed - fix issues and try again")
+        failed = [name for name, result in results if not result]
+        if failed:
+            logger.info("Failed checks: %s", ", ".join(failed))
+            if "Build tools" in failed:
+                logger.info(
+                    "  → Build tools: install pandoc and a LaTeX distribution. "
+                    "e.g. brew install pandoc && brew install --cask basictex (macOS)"
+                )
         return 1
 
 

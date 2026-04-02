@@ -1,0 +1,11 @@
+Project,Metric_Category,Metric_Name,Value,Unit,Rank,Percentile,vs_Average,Performance_Rating
+act_inf_metaanalysis,Manuscript,Total_Words,19925,words,1,100.0%,+21.1%,Excellent
+act_inf_metaanalysis,Manuscript,Sections,20,count,1,100.0%,+11.1%,Excellent
+act_inf_metaanalysis,Codebase,Source_Lines,4969,lines,1,100.0%,+2.4%,Excellent
+act_inf_metaanalysis,Pipeline,Duration,5667.240526199341,seconds,2,0.0%,+85.4%,Excellent
+act_inf_metaanalysis,Outputs,Total_Files,0,files,2,0.0%,-100.0%,Poor
+act_inf_metaanalysis_mine,Manuscript,Total_Words,12969,words,2,0.0%,-21.1%,Poor
+act_inf_metaanalysis_mine,Manuscript,Sections,16,count,2,0.0%,-11.1%,Poor
+act_inf_metaanalysis_mine,Codebase,Source_Lines,4736,lines,2,0.0%,-2.4%,Poor
+act_inf_metaanalysis_mine,Pipeline,Duration,446.38693404197693,seconds,1,100.0%,-85.4%,Poor
+act_inf_metaanalysis_mine,Outputs,Total_Files,48,files,1,100.0%,+100.0%,Excellent

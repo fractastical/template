@@ -9,6 +9,7 @@ from typing import List
 from infrastructure.core.exceptions import RenderingError
 from infrastructure.core.logging_utils import get_logger
 from infrastructure.rendering.config import RenderingConfig
+from infrastructure.rendering.pdf_renderer import _figures_dir_for_manuscript
 
 logger = get_logger(__name__)
 
@@ -104,7 +105,7 @@ class WebRenderer:
         )
 
         # Build pandoc command for HTML conversion
-        figures_dir = manuscript_dir.parent / "output" / "figures"
+        figures_dir = _figures_dir_for_manuscript(manuscript_dir)
         lua_filter = Path(__file__).parent / "convert_latex_images.lua"
 
         cmd = [

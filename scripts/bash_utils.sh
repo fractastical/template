@@ -502,21 +502,24 @@ check_uv() {
     return 1
 }
 
-# Get Python command with uv fallback
+# Get Python command with venv preference
 get_python_cmd() {
     # Returns the command to use for Python execution.
-    # Always uses python3 directly. When run.sh is launched via "uv run ./run.sh",
-    # the venv is already activated — wrapping every subprocess in another "uv run"
-    # adds ~300s overhead per invocation due to environment resolution.
-    echo "python3"
+    # Prefer project .venv (from uv sync) so dependencies like psutil are available.
+    # When run.sh is launched via "uv run ./run.sh", the venv is already activated;
+    # when run directly, use .venv/bin/python if present so deps are found.
+    local venv_python="${REPO_ROOT:-.}/.venv/bin/python"
+    if [[ -x "$venv_python" ]]; then
+        echo "$venv_python"
+    else
+        echo "python3"
+    fi
 }
 
 # Get pytest command
 get_pytest_cmd() {
-    # Returns the command to use for pytest execution.
-    # Always uses python3 -m pytest directly. The venv is already activated
-    # when run.sh is launched via "uv run ./run.sh".
-    echo "python3 -m pytest"
+    # Use the same Python as get_python_cmd so pytest and deps come from venv when present.
+    echo "$(get_python_cmd) -m pytest"
 }
 
 # Log uv availability status
